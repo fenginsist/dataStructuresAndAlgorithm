@@ -1,6 +1,5 @@
 package com.feng.ch04_doubleLinkedlist;
 
-
 public class DoubleLinkedListMain {
     public static void main(String[] args) {
         DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
@@ -34,6 +33,5 @@ public class DoubleLinkedListMain {
         System.out.println("删除后的数据~");
         doubleLinkedList.deleteNode(3);
         doubleLinkedList.list();
-
     }
 }

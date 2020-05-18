@@ -126,7 +126,6 @@ public class DoubleLinkedList {
         }
     }
 
-
     //显示链表【遍历】
     public void list() {
         if (head.next == null) {
