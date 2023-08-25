@@ -1,4 +1,4 @@
-package com.feng.algorithm.self_learn.dijstra.dijstra1;
+package com.feng.algorithm.self_learn.dijkstra.dijkstra1;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.feng.algorithm.self_learn.dijstra.dijstra3;
+package com.feng.algorithm.self_learn.dijkstra.dijkstra3;
 
 import java.util.LinkedList;
 import java.util.Queue;
