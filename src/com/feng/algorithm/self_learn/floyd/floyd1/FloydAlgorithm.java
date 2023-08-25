@@ -1,4 +1,4 @@
-package com.feng.algorithm.self.floyd;
+package com.feng.algorithm.self_learn.floyd.floyd1;
 
 /**
  * 学习视频：https://www.bilibili.com/video/BV1LE411R7CS
@@ -6,38 +6,32 @@ package com.feng.algorithm.self.floyd;
 public class FloydAlgorithm {
     public static void main(String[] args) {
         int[][] graph = new int[4][4];
-        graph[0][0] = 0;
-        graph[0][1] = 5;
-        graph[0][2] = Short.MAX_VALUE;
-        graph[0][3] = 7;
+        int N = Short.MAX_VALUE;
+        graph[0] = new int[]{0, 5, N, 7};
+        graph[1] = new int[]{N, 0, 4, 2};
+        graph[2] = new int[]{3, 3, 0, 2};
+        graph[3] = new int[]{N, N, 1, 0};
 
-        graph[1][0] = Short.MAX_VALUE;
-        graph[1][1] = 0;
-        graph[1][2] = 4;
-        graph[1][3] = 2;
-
-        graph[2][0] = 3;
-        graph[2][1] = 3;
-        graph[2][2] = 0;
-        graph[2][3] = 2;
-
-        graph[3][0] = Short.MAX_VALUE;
-        graph[3][1] = Short.MAX_VALUE;
-        graph[3][2] = 1;
-        graph[3][3] = 0;
         int[][] path = new int[4][4];
-        Floyd.floyd(graph, path);
-        Floyd.printPath(1, 0, path);
+        int[][] A = Floyd.floyd(graph, path);
+        int u = 1;
+        int v = 0;
+        Floyd.printPath(u, v, path);
+        System.out.println();
+        System.out.println(u + "->" + v +" shortest path is :" + A[u][v]);
     }
 }
 class Floyd {
 
     /**
-     * 佛洛依德算法，给定邻接矩阵表示的图，和一个存放路径的二维数据path。
+     * 佛洛依德算法，给定邻接矩阵表示的图，
+     * path[][]:存放路径中间的节点，如果是-1就是直达
+     * A[][]:存放任意两个节点之间的距离
+     * 举例：从1-0，从A得出距离是6，从path得出 1-3-2-0
      * @param graph
      * @param path
      */
-    static void floyd(int[][] graph, int[][] path) {
+    static int[][] floyd(int[][] graph, int[][] path) {
         int n = graph.length;
         int v, i, j;
         int[][] A = new int[n][n];
@@ -58,10 +52,17 @@ class Floyd {
                 }
             }
         }
+        return A;
     }
 
+    /**
+     * 递归打印路径
+     * @param u
+     * @param v
+     * @param path
+     */
     static void printPath(int u, int v, int[][] path) {
-        if (path[u][v] == -1) {
+        if (path[u][v] == -1) { // 如果等于 -1 。说明就是直达的
             System.out.printf(u + "->" + v + " ");
         } else {
             int mid = path[u][v];

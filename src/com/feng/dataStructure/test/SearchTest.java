@@ -10,6 +10,9 @@ import org.junit.Test;
  * 4、斐波那契(黄金分割法)查找算法  ： 有难度
  *
  * 查找前的 数组  都为有序的
+ *
+ * 依赖包：https://zhuanlan.zhihu.com/p/430578155
+ * 放到项目根目录
  * */
 public class SearchTest {
 

@@ -1,4 +1,4 @@
-package com.feng.algorithm.self.dijstra;
+package com.feng.algorithm.self_learn.dijstra.dijstra2;
 
 public class MinDistTest {
 

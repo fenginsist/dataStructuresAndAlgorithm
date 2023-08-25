@@ -1,4 +1,4 @@
-package com.feng.algorithm.self.dijstra;
+package com.feng.algorithm.self_learn.dijstra.dijstra3;
 
 import java.util.*;
 
@@ -9,7 +9,7 @@ import java.util.*;
  *
  * @param <V>
  * 
- *            ??????????????????????
+ * 无向邻接矩阵图
  */
 
 public class UndiretedMatrixGrpah<V> implements Graph<V> {
