@@ -82,8 +82,8 @@ public class S3_InsertSort {
         int insertIndex = 0; // 保存 要插入的位置
 
         for (int i = 1; i < array.length; i++) {
-            insertValue = array[i];  // 第一次 为 34
-            insertIndex = i - 1;    // 第一次 为 0，
+            insertValue = array[i];  // 第一次 为 34 // 待插入的值，无序表的最左边，其下标就是 i
+            insertIndex = i - 1;    // 第一次 为 0， // 有序表的最右边
             /*
              * 给 insertValue 找到插入的位置
              * 说明

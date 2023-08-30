@@ -16,7 +16,7 @@ public class ch01_sort {
         selectSort(arr1);
         System.out.println(Arrays.toString(arr1));
         System.out.println("--------------------------------插入排序");
-        int[] arr2 = {1, 3, 2, 8, 5, 4};
+        int[] arr2 = {3, 1, 2, 8, 5, 4};
         insertSort(arr2);
         System.out.println(Arrays.toString(arr2));
     }
@@ -69,6 +69,16 @@ public class ch01_sort {
      * @param array
      */
     public static void insertSort(int[] array) {
-
+        for (int i = 1; i < array.length; i++) {
+            int insertValue = array[i]; // 待插入的值，无序表的最左边，其下标就是 i
+            int insertIndex = i - 1;    // 有序表的最右边
+            while (insertIndex >= 0 && insertValue < array[insertIndex]) {
+                array[insertIndex + 1] = array[insertIndex];
+                insertIndex--;
+            }
+            if (insertIndex + 1 != i) { // insertIndex+1 == i  ，就不需要进行赋值了，因为这时是正好的排序
+                array[insertIndex + 1] = insertValue;
+            }
+        }
     }
 }
