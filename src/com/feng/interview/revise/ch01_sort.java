@@ -1,4 +1,4 @@
-package com.feng.revise;
+package com.feng.interview.revise;
 
 import java.util.Arrays;
 
@@ -19,6 +19,12 @@ public class ch01_sort {
         int[] arr2 = {3, 1, 2, 8, 5, 4};
         insertSort(arr2);
         System.out.println(Arrays.toString(arr2));
+    }
+
+    public void testStr(){
+        String str = new String();
+        StringBuffer sb = new StringBuffer();
+        StringBuilder sbr = new StringBuilder();
     }
 
     /**
