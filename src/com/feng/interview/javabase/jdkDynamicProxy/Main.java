@@ -1,4 +1,4 @@
-package com.feng.interview.jdkDynamicProxy;
+package com.feng.interview.javabase.jdkDynamicProxy;
 
 public class Main {
     public static void main(String[] args) {

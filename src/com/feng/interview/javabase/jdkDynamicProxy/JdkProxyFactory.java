@@ -1,4 +1,4 @@
-package com.feng.interview.jdkDynamicProxy;
+package com.feng.interview.javabase.jdkDynamicProxy;
 
 import java.lang.reflect.Proxy;
 
